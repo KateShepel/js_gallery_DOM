@@ -8,6 +8,10 @@ galleryList.addEventListener('click', (e) => {
 
   e.preventDefault();
 
+  if (!smallImgLink) {
+    return;
+  }
+
   const newImg = smallImgLink.getAttribute('href');
 
   largeImg.setAttribute('src', newImg);
